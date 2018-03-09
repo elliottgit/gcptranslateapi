@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "elliottn-env",
+  "private_key_id": "633c44aee4ce695eefd49951113696e01c25dda0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDBuWhVQYN8Wuou\npmo4G4Jn8nZPx8feHUdg9DMYLp5TnBdxQcKVmKYwL/HfHEOpgCAWWa5ITv84NZtt\nsoPAz59/aXF25pBGwniIzQBVG82WNGkybTdWkD2K6Wqiuuz9DANUk7zztAtsdgSk\nlXVThasQF7xxzMM2MTGjbi0h4dx4EOwkNIfjLlfKkHIMoAT93N22usEZCvFE3ROL\nyPv8gXcpOO0xMhzL4R5txDkqzqk95V7IuZjaSNlKHfO31hXP+yJJhYGOIoCfBW/5\nS5j3X/iC2Z12bmOlHm3BPaby83YpdYzhFs+6vaWBJxf1Wz8fh1hy7rRtLCAF1Vug\nHHOA46HTAgMBAAECggEAG+FrOpnrKoKLIZuhveF3qy4iCOlfwn/EPhfnIpvS/YWB\nejNUpeMKR/UeglW3BzYBaDYP9ygnYxeT/v2qKJ24/sVWJx6XtRdX8ZhPa/BMbkms\nui0twa+Qq+VcC3+Li/+mmw2ILCrFWh7CHE3GTPb336EK5fXqQmpiEntQ04eGC2Fj\nyyk1E35tfZDJrzznhmZCz2viM44qgNtqicqZk8f+nSARwL5ukD7+kzWrxEniKrTs\n6b7NgOALRbF16+wcZSJXBUosnzb9Xkt4PRXAWyN/pmnkgQnLRhu74656TFsJL/OF\n5AAqbwvqOey8sysBFytHJFPi6X3UM053IMN5x6j2AQKBgQDxfWm1A7+NQQ9gMB90\nWx7P+CB5a9Hxi+XeJ7K70XAeBc+IBdjZqyTpvxBN/NjSqNwtyECc77uVugr42zgm\nlLc6c0dAuMhyV9W0QBflnDMZ7MdLHHFEcRV8LEJQvwFtE3AtTVg1sTllaRKjdsEd\nghZJ+i7UBnqXBznctu96xFyFIQKBgQDNXUP6Q2+iCr7BhXhY9b9S2xUiILo+704v\n0kBIdpZixTYupZbyY+VGpQig3ebl38EdD8nHKV6vUn87NEiXsWuHOQGfCBAbKaIz\nyHSxYLdTIoPNmoYEEHO4DrqvlbpMiIoZrFVVqV8WB2OHY0BW+ITcirB7EjVlycWN\nsmMvlgVUcwKBgFbOZB8jd8nI50QGSGhFEPBlGxdKgK85QKn4zzDgelLwd8dHgsnL\n0XsMqUm/aBlhhbQXVdKUAnQx6hvGgYqszqh+I9DKG5Ouqy0eFPj+iwf4qzL+yGB3\n3edC6Zuo7VRONnayZND4Ic+oU4DbAVQgHO7+tbKVmZ+Mg2opgDA7QZ7BAoGAUu+e\ne1xuoe9a+EaRwsOEP87wavbyoGX+mnt7sIgL1dm1NwNywXMsbepKYMUc8ar6j2UH\n5SHE9mMHtP45buGc/mA8UmBsOLwIoIcM8XGQt8dRmWAVTWDjiuqP5EdAlJXzx8h8\nMfsTxo63WD7yBe2ZooN0IE/LNs9UtBPd0KLyhhcCgYBNe4l1Ear6BzRQ9/7fF6If\nRvkwd816QxkO/boW20Qfg91aRFJdPbluFT29zvtmCFAUqfKGA8SbnnhLsla38hhz\nlY8huZNI2CfTnaWwcqBMmMSKqVXa0Gds6ivWpCY+djLa2CINpWmyhuFxBbUYun6t\n6BRFwM9R2+68wgifNvauhg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "elliottdemo@elliottn-env.iam.gserviceaccount.com",
+  "client_id": "109675837956017922699",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/elliottdemo%40elliottn-env.iam.gserviceaccount.com"
+}
