@@ -1,0 +1,229 @@
+GCP Fundamentals: Core Infrastructure
+How is Google Cloud Platform Built
+
+First, let's see how
+Google Cloud Platform is built. Google Cloud Platform allows you to
+run your applications using the same infrastructure that Google uses
+to deploy their applications. This environment is massively scalable. Some of the most widely used applications
+in the world run on Google's data centers. The numbers are amazing. There are over a trillion
+searches done per year, and there are more than a billion
+active Gmail accounts. This environment is secure. Everything that is stored on
+GCP is encrypted at rest, everything that is being moved around
+GCP is also encrypted at transit. You don't have to enable or configure
+this, it is just the way the system works. GCP is also reliable. All services are designed to be fault
+tolerant, so in the event of any hardware failures, there are always backup
+systems in place that take over. Google Cloud Platform provides
+a broad range of services. Some are related to compute
+infrastructure, some are for storing data, and still others are related to
+big data and machine learning. You can pick and choose which services are most appropriate
+to the applications that you are building. There is never an upfront payment,
+and you only pay for what you use. Google's mission is to organize
+the world's information. To that end, they have building the most advanced
+network of datacenters in the world. Google has datacenters located
+all over the world, and new datacenters are being
+built all the time. These datacenters provide computing
+power and storage capacity, and they are connected with a high
+speed fiber optic network. In addition to the datacenters,
+there are many more points of presence all over the world, again,
+connected by Google's high speed backbone. Google also operates an edge caching
+system with locations all over the world. Data can be cached close to users for
+better performance, and also cost savings. When using GCP,
+if your content is delivered to your users from the cache, there is no charge. Let's cover a little terminology. Regions and Zones. Datacenters are located in various
+locations around the world, these are known as regions. For example, Google has a datacenter in
+the state of Iowa in the United States, this is the US Central 1 region. Each region is divided
+into a number of zones. Each zone is isolated from
+the others within a region. For example, US Central 1 region
+is divided into four zones, A, B, C, and F,
+when deploying your applications, you can spread them into multiple
+zones for greater fall tolerance. Machines in different zones would not
+share any common point of failure. You can also have a disaster recovery
+plan that would enable you to start an application in a different region in
+the event that an entire region was down, an entire region being down
+would be extremely unlikely, but in the event of some natural disaster,
+you could be prepared. Google is committed to making
+datacenters environmentally friendly. This is done in part by constantly
+improving energy efficiency. Everything in a Google datacenter is
+designed and built by Google, and is optimized to run within
+Google's environment. Google also invests in renewable energy
+resources to power its datacenters, and has been carbon neutral since 2007. There is a ton of interesting information
+available online regarding Google's datacenters. See the link on this slide,
+www.google.com/about/datacenters. I like to tell people that you don't
+move to the Cloud because it's cheaper, you move to the Cloud because
+it's superior in every way. However, it is also cheaper, and Google
+provides some innovative pricing models that make it the most straight forward and
+cost effective Cloud provider there is. First, there was sub-hour billing. Most Cloud providers bill for
+compute time by the hour, Google bills for compute time by the minute. So let's say you have a 100 node
+Hadoop cluster that runs a job for 61 minutes, with other providers
+you would be billed for 2 hours times 100 machines, or
+200 hours, that's 12,000 minutes. With Google you would be billed for
+61 minutes times 100 machines, or 6,100 minutes. As you can see, while the per-hour charge
+might look the same between providers, sub-hour billing can add
+up to big cost savings. For machines that run all time Google
+provides sustained-use discounts. When you use an instance for
+more than 25% of a month, Compute Engine automatically gives you a discount for
+every incremental minute that you use. The discount increases with usage, and you can get up to a 30% net discount for
+instances that run the entire month. Sustained-use discounts are simple,
+there is no upfront payment required, and you are not tied to a machine type for
+long term, you just get the discount. Finally, you can fine tune virtual
+machines with custom machine types. These allow you to choose how much
+CPU power and memory to allocate for your virtual machines based on your
+exact application requirements. Google has committed to open source and
+does not tie you to GCP. Many of Google's key products are open and
+will run on platforms not owned by Google. TensorFlow is a machine learning API that
+is used by many of Google's internal systems, this project was
+started by Google but has been released to the community. Android is another well known
+open source Google product. The Go language is widely used
+by App Engine applications, again, it was started by Google but
+open source. Finally, Kubernetes is Google's container
+orchestration system, it is used by Google Container Engine, but it has also
+been released as an open source project, and will run on other platforms, and
+your own internal datacenters as well. Years ago, computers were extremely
+expensive and hard to manage, in those days,
+people couldn't afford to have their own, they rented time on mainframe systems
+owned by universities or large businesses. PCs came along and they were cheap,
+then we started wiring them together, creating networks. PC networks grew larger and
+more expensive to maintain, and at one point co-location companies
+popped up, with co-location you purchase the computers and the software but
+essentially rented real estate in a large datacenter where your machines
+were physically stored. These larger facilities could
+provide greater fault tolerance and faster network performance
+because of their scale. You still owned the servers and were
+responsible for maintaining them though. Then a very important technology
+came along, virtualization. Virtualization allows multiple
+instances of an operating system to run at the same time on a single machine. This allowed companies like Amazon
+to rent space on their hardware and Cloud computing was born. This is arguably the second
+wave of Cloud computing, and where most customers are today, you don't
+own the real estate or the hardware, you are, however, managing the systems. Google has a vision for
+the next wave of Cloud computing, one where services are fully
+managed by the Cloud provider and customers focus on building applications. Many of the services we talk about
+in this class are part of this next wave of Cloud computing,
+these services are NoOps. Google Cloud Platform has a full
+range of Cloud computing products and services, from infrastructure services,
+like Compute Engine and Networking, to NoOps fully automated
+platform services, like App Engine. Google Cloud Platform's products and
+services can be broadly categorized as compute, storage, big data,
+and machine learning. This slide is just a big picture view
+of some of the main services in those categories, there are many
+other services as well, in this class we will look
+at the ones shown here. This will give you a good overview
+of the entire platform and give you a great starting point for
+architecting and building your own services that
+are optimized for the Cloud. In this demo, we'll show you how to get
+started using Google Cloud Platform. So the first thing you want to
+do is open a browser and go to console.cloud.google.com. And you'll have to log in
+with your Gmail account. Now, I've created
+an account exclusively for this demo, so I called it cp100demouser, and I'll click Next, and
+let me enter my password there. Now, obviously, with my real address,
+I already have an account, but with this fake user that I created
+when I go to console.cloud.google.com, it will ask me do I want to sign up for
+the free trial? So when you do this, you're going to have
+to click that button, and sign up for the free trial. And, of course, you'll have to agree
+to the terms and conditions for signing up for the free trial. And once you do that, then you'll have access to
+Google Cloud Platform products and you will get a free $300
+credit that you can use for learning Google Cloud Platform. And then, of course, you'll have to
+set up an account so after that credit expires then they'll be able to bill
+you if you're using any resources. So, you have to just go in and
+fill out the form and enter a credit card payment and so on. And again, don't get too worried about
+entering the credit card payment, they're not initially going to
+charge you anything, in fact, quite the opposite,
+they're going to give you $300 for free. Once you get your account set up and
+you're logged in, a project will be created for
+you by default. I have some notes here. This is my first product, or My First Project that has been created
+in the Google Cloud Platform console. Once you're in the console, you can gain access to the various
+services using this menu on the left-side. So if I click that
+Products & Services menu, we'll see there's a whole collection of
+different services that I have access to. Notice up here in the top,
+these are some administrative and billing related services, so
+you can enable and disable APIs, and control your billing accounts, and
+administrate users, and so on. A little bit lower,
+there's some compute related services, and then storage related services,
+stack drive or monitoring related services,
+so you can monitor usage and health of your machines, and
+create alerts, and things like that. There are a number of different
+development tools that you have access to, and there are also some big data and machine learning services
+down here at the bottom. Now, just to get started doing
+something with GCP, let's just create a virtual machine, and we'll do
+that in the easiest way I know of. So there's a service here
+called Cloud Launcher, so I'm going to choose that from the menu,
+and that'll open up this web page, and there are a whole list of
+pre-configured virtual machines that you could create using this Cloud Launcher
+service that Google provides. And notice there are different
+categories of services, so there are some infrastructure
+related virtual machines. Those would allow you to create,
+say, Windows or Red Hat machines or Ubuntu machines. There are also database related, or preconfigured database machines
+that you can choose from, so maybe you want a MySQL machine or
+a MongoDB machine. Some preconfigured blogs and
+content management systems, like WordPress and so on, and developer
+tools, and other things like that. Also at the top, there's a search
+button that will allow me to search through this collection of
+machines that are preconfigured. Well, I'm going to want to create
+a web server with this machine, and I'm going to want to use a LAMP Stack for
+that, so LAMP stands for Linux,
+Apache, MySQL, and PHP. So I want a preconfigured
+virtual machine that would allow me to deploy
+my website via that stack. And notice when I typed in LAMP,
+it returned two results, so there are two machines here
+that are preconfigured, one was preconfigured by Google, and the
+other one was preconfigured by Bitnami. I think I'll take this first one here
+that was preconfigured by Bitnami, and I'm going to click on that, and then
+this'll bring me to another screen, and I'm going to launch
+this on Compute Engine. Notice it's telling me right here,
+if you launch this virtual machine it'll cost you
+$4.50 per month to run. And it also gives me some
+information about that machine and about the company who
+provided that machine and some other information about
+the infrastructure and the machine and
+the installed software and so on. So let's give it a try,
+we'll click Launch on Compute Engine. Okay, notice it took a couple of minutes
+to initialize Compute Engine and the networking system
+within my new project, but once it initialized, then it gives
+me a little form here that I can fill out to launch this
+LAMP Stack deployment. So let's give it a name, so
+we'll call this lampstack-cp100-demo, notice I can choose where in
+the world I want that machine to be, so let's say we want to put it
+in the Eastern United States. So I'll pick USEast-1, and notice here I
+can specify how large a machine I want, so, the default there is a very
+small machine, f1-micro, and notice that would cost
+me about $4.50 a month. If I chose a bigger machine, then I would
+increase the cost for running that, so let's do that, let's choose
+a slightly bigger machine and 10 GB of storage should be fine, and the rest of
+the defaults I think will be fine as well. Since this is a web server, we're going to
+want to allow HTTP and HTTP traffic, and then, finally when we're satisfied
+with our form here, we can click Deploy. Okay, that machine is starting up using
+another service called Deployment Manager, and it will just take a few seconds for
+that machine to be deployed and then for it to be started, so
+we'll just wait that out. Okay, notice the,
+our machine has finished deploying, that's why we have the green check, and
+this is a list of things that it has done as part of that deployment,
+and hopefully, it's working. Notice on the right here,
+I'm giving a little bit of information, my web server has been given an IP
+address, which is shown here. A temporary administrative password
+has been created, which is also being shown here, and it's showing where
+it is in the machine type and so on. Now I have a couple buttons here, one is
+to visit the site, so let's try that out. So we click Visit the Site, now we
+see we've gone to this IP address and we have our LAMP Stack web server up and
+running, so this, again, is Linux Apache MySQL and
+PHP, so browsing to that gives us the home page as defined
+by this virtual machine and some other information
+we can click on here. We can also go back to
+Google Cloud Platform, and if we want to log into that machine, we can do that via SSH and
+that's very easy to do as well. So let's just click on the SSH button. And that'll connect to our machine. Notice it has to exchange some
+keys to do authentication, and that'll just take a couple seconds to run,
+okay, now we're up and running. So now this is just a Bash
+shell terminal provided by our Linux VM that has been
+configured with LAMP Stack. And we, of course, could enter any
+sort of Linux commands that we wanted to at this point to control our machine,
+or configure our machine, or deploy our web software, or whatever
+else we needed to do, so that's very easy. So now we've seen in our demo, it's pretty easy to get started
+using Google Cloud Platform. Create an account, again,
+if we repeat the steps, go to this URL, console.cloud.google.com. And the first time you visit that, it allows you to login
+with your Gmail address. Once you've logged in
+with your Gmail address, if you've not created an account before,
+you'll be asked to create an account and they'll give you a free trial and
+$300 to use to learn the platform. And then, as we can see,
+once we get our account set up, then we can create projects and
+it'll create a default project for us, and then we have access to
+all these different services. Now throughout the course, we're going to cover many of
+these different services, and see how lots of them work, but for right
+now, we're just trying to get started. Okay, thanks for viewing this demo on getting
+started with Google Cloud Platform.
